@@ -2,12 +2,31 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>Github pages example</title>
-	<link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+	<title>Wild Gunman</title>
+	<link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-	<h1 class="animated shake">Hello Github world</h1>
-	<img src="./img/js.png" alt="">
+	<div class="wrapper">
+		<div class="bandit"></div>
+	</div>
+	<img class="logo" src="./img/logo.jpg" alt="">
+	<div class="defeatscreen"></div>
+	
+	<audio class="au_main" autoplay="autoplay" loop="loop" src="./sound/main.mp3"></audio>
+
+	<audio class="au_shot"   src="./sound/shot.mp3">   </audio>
+	<audio class="au_walk"   src="./sound/walk.mp3">   </audio>
+	<audio class="au_prep"   src="./sound/prep.mp3">   </audio>
+	<audio class="au_fire"   src="./sound/fire.mp3">   </audio>
+	<audio class="au_win"    src="./sound/win.mp3">    </audio>
+	<audio class="au_defeat" src="./sound/defeat.mp3"> </audio>
+
+	
+	<form action="" class="settings">
+		<button class="startbtn btn" type="button">СТАРТ</button>
+		<button class="replay btn" type="button">Сыграть еще раз?</button>
+	</form>
+
+	<script src="./scripts/gunman.js"></script>
 </body>
 </html>

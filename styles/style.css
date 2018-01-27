@@ -1,0 +1,112 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	position: relative;
+}
+.settings {
+	position: absolute;
+	top: 2vh;
+	left: 2vw;
+}
+
+.btn {
+	width: 100px;
+	height: 50px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.replay {
+	display: none;
+}
+.logo {
+	position: absolute;
+	top: 20px;
+	left: 20vw;
+}
+.wrapper {
+	position: relative;
+	background: url('../img/bg.jpg') 0 0 no-repeat;
+	background-size: cover;
+	height: 100%;
+	cursor: url('../img/cursor.png'), pointer;
+}
+.defeatscreen {
+	display: none;
+	background-color:rgba(255,0,0,.5);
+    height:100%;
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+}
+
+.bandit {
+	display: none;
+	position: absolute;
+	left: 50px;
+	bottom: 100px;
+	width: 124px;
+	height: 255px;
+	background: url('../sprites/sprites.png') -20px -928px no-repeat;
+}
+
+.bandit_walk {
+	transform: translateX(45vw);
+	transition: transform 5s linear;
+	animation-name: walk;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(1, end);
+	animation-duration: 1s;
+}
+.bandit_prepare {
+	transform: translateX(45vw);
+	background-position-x: -20px;
+
+}
+.bandit_shot {
+	animation-name: shoot;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: steps(1, end);
+	transform: translateX(45vw);
+}
+.bandit_dead {
+	transform: translateX(45vw);
+	width: 256px;
+	background-position-x: -952px;
+}
+
+.bandit_wins {
+	transform: translateX(45vw);
+	background-position-x: -1224px;
+}
+
+@keyframes walk {
+	0% {
+		background-position-x: -20px;
+	}
+	33.33333% {
+		background-position-x: -152px;
+	}
+	66.66666% {
+		background-position-x: -292px;
+	}
+	100% {
+		background-position-x: -20px;
+	}
+}
+
+@keyframes shoot {
+	0% {
+		background-position-x: -428px;
+	}
+	33.33333% {
+		background-position-x: -556px;
+	}
+	66.66666% {
+		background-position-x: -688px;
+	}
+	100% {
+		background-position-x: -824px;
+	}
+}
